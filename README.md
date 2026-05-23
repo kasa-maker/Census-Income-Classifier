@@ -15,8 +15,8 @@
 ---
 
 ## 🚀 Live Demo & Deployment
-🌐 **Live Application:** [Click Here to Visit the App](https://huggingface.co/spaces/kasa-maker/Census-Income-Classifier) 
-*(Replace the link above once your HF Space is active!)*
+🌐 **Live Application:** [Click Here to Visit the App](https://huggingface.co/spaces/kasaam89/Census-Income-Classifier) 
+
 
 ---
 
