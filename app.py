@@ -1,7 +1,11 @@
 import streamlit as st
 import requests
+import os
 
 st.set_page_config(page_title="Income Classifier", layout="centered")
+
+# Get backend URL from environment variable for Docker support, default to localhost
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
 
 st.title("💰 Adult Income Prediction System")
 st.write("Enter the details below to check if the individual's income is >50K or <=50K.")
@@ -54,9 +58,9 @@ if submit_btn:
     }
     
     try:
-        # FastAPI server ko request bhejna (Localhost port 8000 par)
+        # FastAPI server ko request bhejna
         with st.spinner("Calculating prediction..."):
-            response = requests.post("http://127.0.0.1:8000/predict", json=payload)
+            response = requests.post(f"{BACKEND_URL}/predict", json=payload)
             response_data = response.json()
             
         # Result display karna
