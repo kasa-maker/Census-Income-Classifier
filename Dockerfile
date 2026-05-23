@@ -1,21 +1,26 @@
-# Use Python 3.11 slim image
 FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy requirements first for better caching
-COPY requirements.txt .
+# Install system dependencies
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
-# Install dependencies
+# Copy requirements and install
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application files
-COPY main.py .
-COPY model.pkl .
+# Copy the entire project
+COPY . .
 
-# Expose FastAPI port
-EXPOSE 8000
+# Make the start script executable
+RUN chmod +x /app/start.sh
 
-# Run FastAPI backend
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Set environment variables for Hugging Face
+ENV BACKEND_URL=http://127.0.0.1:8000
+
+# Hugging Face Spaces expects the app to be on port 7860
+EXPOSE 7860
+
+# Start both services using the shell script
+CMD ["/bin/bash", "start.sh"]
