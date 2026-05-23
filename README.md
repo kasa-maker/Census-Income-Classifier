@@ -1,5 +1,12 @@
 # 💰 Census Income Classifier
 
+![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.136.1-009688.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.57.0-FF4B4B.svg)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.6.1-F7931E.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![GitHub Stars](https://img.shields.io/github/stars/kasa-maker/Census-Income-Classifier?style=social)
+
 A machine learning web application that predicts whether an individual's annual income exceeds $50K based on census data. Built with FastAPI backend and Streamlit frontend.
 
 ## 🎯 Features
