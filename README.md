@@ -74,7 +74,7 @@ The system analyzes 14 key census features:
 
 ### 1. Clone & Navigate
 ```bash
-git clone https://github.com/kasa-maker/Census-Income-Classifier.git
+git clone https://github.com/kasaam-ali/Census-Income-Classifier.git
 cd Census-Income-Classifier
 ```
 
@@ -126,7 +126,7 @@ Contributions make the open-source community amazing!
 ## 👤 Author
 
 **Kasa-Maker** 🚀
-- GitHub: [@kasa-maker](https://github.com/kasa-maker)
+- GitHub: [@kasaam-ali](https://github.com/kasaam-ali)
 
 <p align="center">
   ⭐ <b>If you like this project, please give it a star!</b> ⭐
